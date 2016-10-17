@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html>
     <body style="background-image:url(http://i.imgur.com/zOM9VzH.jpg?1)">
-    <div id="player"></div>
-    <script>
-      var tag = document.createElement('script');
+        <span>Just a text node</span>
+        <spacer type="horizontal" size="10"></spacer>
+        <span>Just another text node</span>
+        <spacer type="block" width="10" height="10"></spacer>
+        <div id="player"></div>
+        <script>
+          var tag = document.createElement('script');
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'R-DCl-7ZYYI',
-          events: {
-            'onReady': onPlayerReady,
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+              height: '390',
+              width: '640',
+              videoId: 'R-DCl-7ZYYI',
+              events: {
+                'onReady': onPlayerReady,
+              }
+            });
           }
-        });
-      }
 
-      function onPlayerReady(event) {
-        event.target.setVolume(30);
-        event.target.playVideo();
-      }
-    </script>
-  </body>
+          function onPlayerReady(event) {
+            event.target.setVolume(30);
+            event.target.playVideo();
+          }
+        </script>
+    </body>
 </html>
