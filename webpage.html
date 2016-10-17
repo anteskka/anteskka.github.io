@@ -1,7 +1,6 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		
 		<style>
 			@keyframes spin
 			{
@@ -9,45 +8,45 @@
 				{
 					transform: rotate(0deg);
 				}
-				
+
 				to
 				{
 					transform: rotate(360deg);
 				}
 			}
-		
+
 			body
 			{
 				font-family: serif;
 				text-align: center;
-				
+
 				background-image: url("monster.jpg");
 			}
-			
+
 			div
 			{
 				color: white;
 				font-size: 1.5em;
 			}
-			
+
 			div.fuck
 			{
 				font-weight: bold;
 				font-size: 2em;
-				
+
 				line-height: 2;
 				color: black;
 			}
-			
+
 			span.spin
 			{
 				margin: 1em 0;
-				
+
 				font-size: 3em;
 				color: #0000C8;
-				
+
 				display: inline-block;
-				
+
 				animation-name: spin;
 				animation-duration: 2s;
 				animation-iteration-count: infinite;
@@ -56,42 +55,35 @@
 		</style>
 	</head>
 
-		<div>
-			<span class="spin">welcom</span><br>
-			Welcome to online ​daycare!<br>
-			We provide many family-friendly activities and games that are sure to keep your toddler entertained. If you have any concerns or questions, please feel free to ask a patron or faculty member.
-		</div>
-	
-		<div class="fuck">
-			fuck<br>
-			fuck<br>
-			fuck<br>
-			fuck
-		</div>
-			<div id="player"></div>
-		 <script>
-		 	var tag = document.createElement('script');
-		 	tag.src = "https://www.youtube.com/iframe_api";
-		 	var firstScriptTag = document.getElementsByTagName('script')[0];
-		 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-			
-		 	var player;
- 		  function onYouTubeIframeAPIReady() {
- 		    player = new YT.Player('player', {
- 		      height: '0',
- 		      width: '0',
- 		      videoId: 'R-DCl-7ZYYI',
- 		      events: {
- 			'onReady': onPlayerReady,
- 		      }
- 		    });
- 		  }
- 
- 		  function onPlayerReady(event) {
- 		    event.target.setVolume(30);
- 		    event.target.playVideo();
- 			}
-		</script>
+	<div>
+		<span class="spin">welcom</span><br>
+		Welcome to online daycare!<br>
+		We provide many family-friendly activities and games that are sure to keep your toddler entertained. If you have any concerns or questions, please feel free to ask a patron or faculty member.
+	</div>
+
+	<div id="player"></div>
+	<script>
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		var player;
+		function onYouTubeIframeAPIReady() {
+		  player = new YT.Player('player', {
+		    height: '0',
+		    width: '0',
+		    videoId: 'R-DCl-7ZYYI',
+		    events: {
+		'onReady': onPlayerReady,
+		    }
+		  });
+		}
+
+		function onPlayerReady(event) {
+		  event.target.setVolume(30);
+		  event.target.playVideo();
+		}
+	</script>
 	</body>
 </html>
-
