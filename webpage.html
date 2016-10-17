@@ -55,34 +55,7 @@
 			}
 		</style>
 	</head>
-	
-	<body>
-+		<div id="player"></div>
- +		<script>
- +		  var tag = document.createElement('script');
- +
- +		  tag.src = "https://www.youtube.com/iframe_api";
- +		  var firstScriptTag = document.getElementsByTagName('script')[0];
- +		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
- +
- +		  var player;
- +		  function onYouTubeIframeAPIReady() {
- +		    player = new YT.Player('player', {
- +		      height: '0',
- +		      width: '0',
- +		      videoId: 'R-DCl-7ZYYI',
- +		      events: {
- +			'onReady': onPlayerReady,
- +		      }
- +		    });
- +		  }
- +
- +		  function onPlayerReady(event) {
- +		    event.target.setVolume(30);
- +		    event.target.playVideo();
- +		  }
- +		</script>
-		
+
 		<div>
 			<span class="spin">welcom</span><br>
 			Welcome to online ​daycare!<br>
@@ -95,5 +68,30 @@
 			fuck<br>
 			fuck
 		</div>
+			<div id="player"></div>
+		 <script>
+		 	var tag = document.createElement('script');
+		 	tag.src = "https://www.youtube.com/iframe_api";
+		 	var firstScriptTag = document.getElementsByTagName('script')[0];
+		 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+			
+		 	var player;
+ 		  function onYouTubeIframeAPIReady() {
+ 		    player = new YT.Player('player', {
+ 		      height: '0',
+ 		      width: '0',
+ 		      videoId: 'R-DCl-7ZYYI',
+ 		      events: {
+ 			'onReady': onPlayerReady,
+ 		      }
+ 		    });
+ 		  }
+ 
+ 		  function onPlayerReady(event) {
+ 		    event.target.setVolume(30);
+ 		    event.target.playVideo();
+ 			}
+		</script>
 	</body>
 </html>
+
